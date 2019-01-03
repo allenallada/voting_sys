@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/api/local/voters', 'VotersController@create');
+
+Route::post('/api/local/voters/hasVoted', 'VotersController@checkIfVoted');
+Route::get('/api/local/voters/hasVoted', 'VotersController@show');
